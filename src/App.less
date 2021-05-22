@@ -1,0 +1,179 @@
+@import '~antd/dist/antd.less';
+@primary-color: #30649B; // primary color for all components
+@secondary-color: #F7D95F; // primary color for all components
+@link-color: #1890ff; // link color
+@success-color: #52c41a; // success state color
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+@font-size-base: 14px; // major text font size
+@heading-color: rgba(0, 0, 0, 0.85); // heading text color
+@text-color: rgba(0, 0, 0, 0.65); // major text color
+@text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
+@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+@border-radius-base: 2px; // major border radius
+@border-color-base: #d9d9d9; // major border color
+@box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+  0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+
+/*Common*/
+.d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+}
+.d-flex{
+  display: flex;
+}
+.bg-white {
+  background: #fff;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mb-1{
+  margin-bottom: 1rem;
+}
+.p-x8-y16{
+  padding: 8px 16px;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.fs-15{
+  font-size: 1.5rem;
+}
+.fs-2{
+  font-size: 2rem;
+}
+.fw-700{
+  font-weight: 700
+}
+.br-b-0{
+  border-bottom:0px
+}
+.br-r-0{
+  border-right:0px
+}
+/*Common*/
+
+/*Header & Sidebar*/
+#ekikartLayout{
+  .trigger {
+    padding: 0 14px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+    &:hover{
+      color: @secondary-color;
+    }
+  }
+  .logo {
+    padding: 8px;    
+  }
+  .ant-layout-sider-collapsed{
+    .logoBig{
+      .d-none()!important;
+    }
+    .logoSmall{
+      .d-block()!important;
+    }        
+  } 
+  .logoSmall{
+    .d-none()!important;
+  }
+}
+/*Header & Sidebar*/
+
+/*Avtar Dropdown*/
+.avtarDropdown{
+  width: 300px;
+  padding: 0px!important;   
+  .avtarTop{
+    background-color: @primary-color;
+    padding: 15px;
+  }
+  .avtarBottom div{
+      padding: 25px 0;
+      border-right:1px solid @border-color-base;
+      border-bottom:1px solid @border-color-base;
+      a{
+        color:@text-color;
+        .fw-700();
+        &:hover{
+          color:@primary-color
+        }
+      }
+      span.icon{
+        .d-block()!important;
+        margin-bottom: 4px;
+        font-size: 24px;
+      }
+      span.title{
+        .d-block()!important;
+      }
+      &:nth-of-type(2),&:nth-of-type(4){
+        .br-r-0();
+      }
+      &:nth-of-type(3),&:nth-of-type(4){
+        .br-b-0();
+      }
+  }
+}
+.ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{
+  border-color: @primary-color transparent transparent @primary-color!important;
+}
+/*Avtar Dropdown*/
+
+/*Table*/
+.ant-table-thead > tr > th,.ant-table-tbody > tr > td {
+  .p-x8-y16()!important;
+}
+.ant-table-tbody > tr.ant-table-measure-row > td{
+  padding:0px!important
+}
+.salessummaryTable{
+  .ant-table table{
+    tr{
+      &:last-child td{
+        .br-b-0()
+      }
+    }
+    tr[data-row-key="grossSales"] td,tr[data-row-key="netSales"] td,tr[data-row-key="total"] td{
+      .fw-700();
+    }
+  }
+}
+.paymentcollectedTable{
+  .ant-table table{
+    tr{
+      div{
+        .d-flex();
+        .icon{
+          padding: 6px;
+          background-color: #f4f4f4;
+          border-radius: 5px;
+          margin-right: 10px; 
+          color:#30649B       
+        }
+        span{
+          align-items: center;
+          .d-flex();
+        }
+      }
+      &:last-child td{
+        .br-b-0()!important;
+      }
+      [data-row-key="2"]:nth-of-type(1) td,
+      [data-row-key="2"]:nth-of-type(2) td,
+      [data-row-key="2"]:nth-of-type(3) td,
+      [data-row-key="2"]:nth-of-type(4) td{
+        .p-x8-y16()!important;
+      }
+    }
+    tr[data-row-key="totalcollected"] td,tr[data-row-key="nettotal"] td{
+      .fw-700()!important;
+    }
+  }
+}
