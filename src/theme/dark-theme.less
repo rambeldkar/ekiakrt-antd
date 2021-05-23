@@ -20,6 +20,8 @@
 @table-header-sort-active-bg: #1F1F1F;
 @table-body-color: #1F1F1F;
 @sec-text-color: rgba(255,255,255,.85);
+@text-color-light: #fff; // white state color
+@text-color-dark: #000; // black state color
 
 
 .br-b-0{
@@ -31,7 +33,10 @@
 .ant-layout-header,.ant-layout-header.bg-white,.ant-menu-dark .ant-menu-inline.ant-menu-sub{
     background-color: @inner-background;
 }
-.bg-white,.ant-picker,.ant-select,.ant-tooltip-inner,.ant-tooltip-arrow-content{
+.ant-menu-dark .ant-menu-item-selected>a,.ant-btn-primary{
+    color: @text-color-dark!important;
+}
+.bg-white,.ant-picker,.ant-select,.ant-tooltip-inner,.ant-tooltip-arrow-content,.ant-input{
     background-color: @component-background;
 }
 .ant-table-tbody>tr.ant-table-row:hover>td,.ant-table-thead>tr>th{
@@ -40,6 +45,7 @@
 .ant-table-tbody>tr>td,.ant-table-thead>tr>th{
     border-bottom-color: @table-body-color;
 }
+
 tr[data-row-key="totalcollected"] td,
 tr[data-row-key="nettotal"] td,
 tr[data-row-key="grossSales"] td,
@@ -53,6 +59,10 @@ tr[data-row-key="total"] td{
 .avtarDropdown{
     .avtarTop{
         background-color: @primary-color;
+        color: @text-color-dark!important;
+        h4{
+            color: @text-color-dark!important;
+        }
     }
 }
 .ant-dropdown-placement-bottomRight>.ant-dropdown-arrow{
@@ -84,5 +94,29 @@ input::placeholder {
     color:@sec-text-color!important;
 }
 .paymentcollectedTable .ant-table table tr div .icon{
-    color:@primary-color!important
+    color:@primary-color!important;
+    background-color: @body-background;
+}
+/*Filter Dropdown*/
+.locationDropdown {
+    span{
+      color:@primary-color
+    }
+}
+
+/*Modal*/
+.ant-modal-content{
+    background-color: @inner-background!important;
+}
+
+/*Popover*/
+.ant-popover-inner-content{
+    .ant-modal-content();
+}
+
+/*Empty*/
+.emptyMessageBox{
+    p{
+      color:@sec-text-color!important
+    }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Table} from 'antd';
-const { Column } = Table;
 const columns = [
     {
       title: 'Sales',
@@ -48,8 +47,8 @@ const columns = [
 ];
 const data = [
     {
-        key: 'grossSales',
-        label: 'Gross Sales',
+        key: 'total',
+        label: 'Total Sales',
         dayfilterData: '$1500',
     },
     {
@@ -58,24 +57,26 @@ const data = [
         dayfilterData: '$500',
     },
     {
-        key: 'discounts',
-        label: 'Discounts',
-        dayfilterData: '$100',
-    },
-    {
-        key: 'netSales',
-        label: 'Net Sales',
-        dayfilterData: '$1100',
-    },
-    {
         key: 'tax',
         label: 'Tax',
-        dayfilterData: '$50'
-    },
-    {
-        key: 'total',
-        label: 'Total',
-        dayfilterData: '$1150'
+        dayfilterData: '$50',
+        children: [
+            {
+              key: 11,
+              label: 'Tax Name 1',
+              dayfilterData: '$50',
+            },
+            {
+                key: 12,
+                label: 'Tax Name 2',
+                dayfilterData: '$0',
+            },
+            {
+                key: 13,
+                label: 'Tax Name 3',
+                dayfilterData: '$0',
+            },
+        ],
     },
   ];
 const Salessummarylist = () => {

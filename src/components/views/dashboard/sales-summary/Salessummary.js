@@ -4,10 +4,12 @@ import { Column } from '@ant-design/charts' ;
 import Pagetitle from '../../../layout/Pagetitle.js'
 import Salessummarylist from './Salessummarylist.js'
 import Paymentcollected from './Paymentcollected.js'
-import Rangepicker from '../../../layout/Rangepicker.js'
-import Selectsummary from '../../../layout/Selectsummary.js'
-import { Layout,Row,Col,Button,Skeleton} from 'antd';
-import {DownloadOutlined} from '@ant-design/icons';
+import Rangepicker from '../../../layout/filter/Rangepicker.js'
+import Selectsummary from '../../../layout/filter/Selectsummary.js'
+import Allday from '../../../layout/filter/Allday.js'
+import Location from '../../../layout/filter/Location.js'
+import Exportbutton from '../../../layout/Exportbutton.js'
+import { Layout,Row,Col,Skeleton} from 'antd';
 const { Content } = Layout;
 const title = "Sales Summary";
 
@@ -43,7 +45,6 @@ const monthData = [
     { month: 'May29', value: 4 },
     { month: 'May30', value: 35 },
 ];
-
 const monthConfig = {
     data : monthData ,     
     height: 180,
@@ -102,9 +103,6 @@ const monthConfig = {
       interactions : [ { type : 'marker-active' } ] ,
 };
 
-let monthchart;
-
-
 var weekData = [ 
     {
         type : 'Sun' , 
@@ -158,7 +156,6 @@ meta : {
 } ,
 } ;
 
-
 const timeData = [
     { month: '12am', value: 20 },
     { month: '1am', value: 420 },
@@ -185,7 +182,6 @@ const timeData = [
     { month: '10pm', value: 49 },
     { month: '11pm', value: 63 }
 ];
-
 const timeConfig = {
     data : timeData ,     
     height: 180,
@@ -245,25 +241,31 @@ const timeConfig = {
     
 };
 
-let timechart;
 
 const Salessummary = () => {
   const [ loading, setLoading ] =  React.useState(true);
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   },[])
   return ( 
       <>
           <Pagetitle title={title}/>
-          <Row style={{padding:'0 14px 14px 14px'}} type="flex">            
-              <Col>
+          <Row style={{padding:'0 14px 14px 14px', margin:'0px'}} gutter={{ xs:12, lg: 6 }}>            
+              <Col style={{paddingLeft:'0px'}}>
                   <Rangepicker/>
+              </Col>
+              <Col>
+                  <Allday selectvalue="Allday"/>
               </Col>
               <Col>            
                   <Selectsummary selectvalue="Daily"/>
+              </Col>              
+              <Col>
+                  <Location/>
               </Col>
-              <Col className="ml-auto">    
-                  <Button type="primary" icon={<DownloadOutlined />}>Export</Button> 
+              <Col className="ml-auto" >    
+                  <Exportbutton/> 
               </Col>
           </Row>
           <Content  style={{minHeight: 200}}>
@@ -272,7 +274,7 @@ const Salessummary = () => {
                     <div  className="bg-white" style={{margin: '0px 14px 0px 14px',padding: 14,minHeight: 200}}>
                       <Skeleton paragraph={{ rows:5 }} loading={loading} active >
                         <h4 className="mb-1 text-uppercase">May 1, 2021–May 31, 2021</h4>
-                        <Line {...monthConfig} onReady={(chartInstance) => (monthchart = chartInstance)} />
+                        <Line {...monthConfig} />
                       </Skeleton>  
                     </div>
                 </Col>
@@ -288,7 +290,7 @@ const Salessummary = () => {
                     <div  className="bg-white" style={{margin: '14px 14px 14px 7px',padding: 14,minHeight: 200}}>
                       <Skeleton paragraph={{ rows:5 }} loading={loading} active >
                         <h4 className="mb-1 text-uppercase">Time of day</h4>
-                        <Line {...timeConfig} onReady={(chartInstance) => (timechart = chartInstance)} />
+                        <Line {...timeConfig}  />
                       </Skeleton>
                     </div>
                 </Col>
@@ -296,18 +298,17 @@ const Salessummary = () => {
             <Row>
                 <Col lg={24} xs={24}>
                     <div  className="bg-white" style={{margin: '0px 14px 14px 14px',padding: 14}}>
-                      <Skeleton paragraph={{ rows:5 }} loading={loading} active >
+                      <Skeleton paragraph={{ rows:4 }} loading={loading} active >
                         <h4 className="mb-1 text-uppercase">Summary Report</h4>
                         <Salessummarylist/>
                       </Skeleton>
-                    </div>
-                      
+                    </div>                      
                 </Col>
             </Row>
             <Row>
                 <Col lg={24} xs={24}>
                     <div  className="bg-white" style={{margin: '0px 14px 0px 14px',padding: 14}}>
-                      <Skeleton paragraph={{ rows:10 }} loading={loading} active >
+                      <Skeleton paragraph={{ rows:9 }} loading={loading} active >
                         <h4 className="mb-1 text-uppercase">Payment Collected</h4>
                         <Paymentcollected/>
                       </Skeleton>

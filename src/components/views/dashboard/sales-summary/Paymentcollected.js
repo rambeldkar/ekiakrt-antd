@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table} from 'antd';
 import {DollarOutlined, CreditCardOutlined, WalletOutlined, GiftOutlined} from '@ant-design/icons';
-const { Column } = Table;
+
 const columns = [
     {
       title: 'Sales',
@@ -105,18 +105,13 @@ const data = [
         key: 'other',
         label: ['Other'],
         dayfilterData: '$0.00'
-    },
-    {
-        key: 'fees',
-        label: ['Fees'],
-        dayfilterData: '$0.00'
-    },        
+    },            
     {
         key: 'nettotal',
         label: ['Net Total'],
         dayfilterData: '$0.00'
     },
-  ];
+];
 
 const Paymentcollected = () => {
         return (         

@@ -14,6 +14,9 @@
 @border-color-base: #d9d9d9; // major border color
 @box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
   0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+@text-color-light: #fff; // white state color
+@text-color-dark: #000; // black state color
+
 
 /*Common*/
 .d-none{
@@ -33,6 +36,9 @@
 }
 .mb-1{
   margin-bottom: 1rem;
+}
+.btn-mr8{
+  margin-right: 8px;
 }
 .p-x8-y16{
   padding: 8px 16px;
@@ -93,6 +99,10 @@
   .avtarTop{
     background-color: @primary-color;
     padding: 15px;
+    color: @text-color-light!important;
+    h4{
+        color: @text-color-light!important;
+    }
   }
   .avtarBottom div{
       padding: 25px 0;
@@ -139,9 +149,20 @@
       &:last-child td{
         .br-b-0()
       }
+      td{
+        .ant-table-row-expand-icon{
+          display: none
+        }
+      }
     }
     tr[data-row-key="grossSales"] td,tr[data-row-key="netSales"] td,tr[data-row-key="total"] td{
       .fw-700();
+    }
+    tr[data-row-key="tax"] td .ant-table-row-expand-icon{
+      float: right;
+      left: -95px;
+      display: block;
+      margin-top: 3px;
     }
   }
 }
@@ -152,10 +173,10 @@
         .d-flex();
         .icon{
           padding: 6px;
-          background-color: #f4f4f4;
+          background-color: #30649B;
           border-radius: 5px;
           margin-right: 10px; 
-          color:#30649B       
+          color:#fff       
         }
         span{
           align-items: center;
@@ -176,4 +197,26 @@
       .fw-700()!important;
     }
   }
+}
+
+/*Filter Dropdown*/
+.locationSelect{
+  .ant-select-selector {
+    .ant-select-selection-overflow{
+      flex-wrap: nowrap!important;
+      overflow: hidden!important;
+    }
+  }
+}
+.locationDropdown {
+  span{
+    color:@primary-color
+  }
+}
+
+/*Empty*/
+.emptyMessageBox{
+    p{
+      color:@text-color!important
+    }
 }

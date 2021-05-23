@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  NavLink,Link
+  NavLink
 } from "react-router-dom";
 import '../../../App.less';
 import { Menu} from 'antd';
@@ -31,7 +31,6 @@ const Sidebarlayout = () => {
         defaultOpenKeys={['sub1']}>
         <SubMenu key="sub1" icon={<DashboardOutlined />} title="Dashboard">
             <Menu.Item key="1"><NavLink activeClassName="active" to="/">Sales Summary </NavLink></Menu.Item>
-            <Menu.Item key="2"><NavLink activeClassName="active" to="/payment-methods">Payment Methods </NavLink></Menu.Item>
             <Menu.Item key="3"><NavLink activeClassName="active" to="/">Item Sales</NavLink></Menu.Item>
         </SubMenu>
         <Menu.Item key="4" icon={<ShopOutlined />} title="Merchant Management">Merchant Management</Menu.Item>
