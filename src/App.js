@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.less';
 import {
   BrowserRouter as Router,
   Switch as Switch1,
   Route
 } from "react-router-dom";
+import MediaQuery from 'react-responsive'
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { Layout,Switch} from 'antd';
 import {MenuUnfoldOutlined,MenuFoldOutlined} from '@ant-design/icons';
@@ -13,6 +13,7 @@ import Headerlayout from './components/common/header/Header.js'
 import Footerlayout from './components/common/footer/Footer.js'
 import Salessummary from './components/views/dashboard/sales-summary/Salessummary.js'
 import Salessummaryempty from './components/views/dashboard/sales-summary/Salessummaryempty';
+import './App.less';
 
 const App = () => {
   const { Header, Sider } = Layout;
@@ -27,9 +28,16 @@ const App = () => {
     <Router>
       <div className="ekiakrtApp" id="ekikartLayout">
       <Layout style={{ minHeight: '100vh' }}>
-          <Sider trigger={null} collapsible collapsed={isCollapsed} width={230} className="ekikartSidebar">
-              <Sidebarlayout/>
-          </Sider>
+          <MediaQuery minDeviceWidth={992}>
+            <Sider trigger={null} collapsible collapsed={isCollapsed} width={230} className="ekikartSidebar">
+                <Sidebarlayout/>
+            </Sider>
+          </MediaQuery>
+          <MediaQuery maxDeviceWidth={991}>
+            <Sider trigger={null} collapsible collapsed={!isCollapsed} width={230} className="ekikartSidebar">
+                <Sidebarlayout/>
+            </Sider>
+          </MediaQuery>          
           <Layout className="site-layout">
               <Header className="bg-white" style={{ padding: 0 }}>
                   {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
