@@ -309,7 +309,7 @@ const Salessummary = () => {
         <Row>
           <Col lg={24} xs={24}>
             <div className="bg-white" style={{ margin: '0px 14px 0px 14px', padding: 14 }}>
-              <Skeleton paragraph={{ rows: 9 }} loading={loading} active >
+              <Skeleton paragraph={{ rows: 8 }} loading={loading} active >
                 <h4 className="mb-1 text-uppercase">Payment Collected</h4>
                 <Paymentcollected />
               </Skeleton>
