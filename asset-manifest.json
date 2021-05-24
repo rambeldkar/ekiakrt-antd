@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/ekiakrt-antd/static/css/main.ad1f7346.chunk.css",
-    "main.js": "/ekiakrt-antd/static/js/main.78aa0f29.chunk.js",
-    "main.js.map": "/ekiakrt-antd/static/js/main.78aa0f29.chunk.js.map",
-    "runtime-main.js": "/ekiakrt-antd/static/js/runtime-main.798e9685.js",
-    "runtime-main.js.map": "/ekiakrt-antd/static/js/runtime-main.798e9685.js.map",
-    "static/js/2.60a9c873.chunk.js": "/ekiakrt-antd/static/js/2.60a9c873.chunk.js",
-    "static/js/2.60a9c873.chunk.js.map": "/ekiakrt-antd/static/js/2.60a9c873.chunk.js.map",
-    "static/js/3.09d7957c.chunk.js": "/ekiakrt-antd/static/js/3.09d7957c.chunk.js",
-    "static/js/3.09d7957c.chunk.js.map": "/ekiakrt-antd/static/js/3.09d7957c.chunk.js.map",
+    "main.css": "/ekiakrt-antd/static/css/main.3d4fbbb0.chunk.css",
+    "main.js": "/ekiakrt-antd/static/js/main.a053b6ea.chunk.js",
+    "main.js.map": "/ekiakrt-antd/static/js/main.a053b6ea.chunk.js.map",
+    "runtime-main.js": "/ekiakrt-antd/static/js/runtime-main.094a8e0f.js",
+    "runtime-main.js.map": "/ekiakrt-antd/static/js/runtime-main.094a8e0f.js.map",
+    "static/css/2.aeddefd9.chunk.css": "/ekiakrt-antd/static/css/2.aeddefd9.chunk.css",
+    "static/js/2.df0b2eea.chunk.js": "/ekiakrt-antd/static/js/2.df0b2eea.chunk.js",
+    "static/js/2.df0b2eea.chunk.js.map": "/ekiakrt-antd/static/js/2.df0b2eea.chunk.js.map",
+    "static/js/3.3afbe9b9.chunk.js": "/ekiakrt-antd/static/js/3.3afbe9b9.chunk.js",
+    "static/js/3.3afbe9b9.chunk.js.map": "/ekiakrt-antd/static/js/3.3afbe9b9.chunk.js.map",
     "index.html": "/ekiakrt-antd/index.html",
-    "static/css/main.ad1f7346.chunk.css.map": "/ekiakrt-antd/static/css/main.ad1f7346.chunk.css.map",
-    "static/js/2.60a9c873.chunk.js.LICENSE.txt": "/ekiakrt-antd/static/js/2.60a9c873.chunk.js.LICENSE.txt",
+    "static/css/2.aeddefd9.chunk.css.map": "/ekiakrt-antd/static/css/2.aeddefd9.chunk.css.map",
+    "static/css/main.3d4fbbb0.chunk.css.map": "/ekiakrt-antd/static/css/main.3d4fbbb0.chunk.css.map",
+    "static/js/2.df0b2eea.chunk.js.LICENSE.txt": "/ekiakrt-antd/static/js/2.df0b2eea.chunk.js.LICENSE.txt",
     "static/media/avtar.6db215d0.jpg": "/ekiakrt-antd/static/media/avtar.6db215d0.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.798e9685.js",
-    "static/js/2.60a9c873.chunk.js",
-    "static/css/main.ad1f7346.chunk.css",
-    "static/js/main.78aa0f29.chunk.js"
+    "static/js/runtime-main.094a8e0f.js",
+    "static/css/2.aeddefd9.chunk.css",
+    "static/js/2.df0b2eea.chunk.js",
+    "static/css/main.3d4fbbb0.chunk.css",
+    "static/js/main.a053b6ea.chunk.js"
   ]
 }
