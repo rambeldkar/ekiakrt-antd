@@ -1,12 +1,36 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { Select, Divider, Modal, Form, Input, TimePicker, Row, Col } from 'antd';
+import { Select, Divider, Modal, Form, Input, TimePicker, Row, Col, message } from 'antd';
 import { PlusOutlined, FieldTimeOutlined } from '@ant-design/icons';
 const { Option } = Select;
 
 const selectOnChange = (value) => {
   console.log(`selected ${value}`);
 }
+const success = () => {
+  message.success({
+    content: 'This is a message of success',
+    duration: 2
+  });
+};
+/*const error = () => {
+  message.error({
+    content: 'This is an error message',
+    duration: 2
+  });
+};
+const warning  = () => {
+  message.warning ({
+    content: 'This is a warning message',
+    duration: 2
+  });
+};
+const info = () => {
+  message.info ({
+    content: 'This is a normal message',
+    duration: 2
+  });
+};*/
 
 const ShiftDetailsForm = ({ visible, onCreate, onCancel }) => {
   const [form] = Form.useForm();
@@ -106,6 +130,7 @@ const Allday = (props) => {
   const onCreate = (values) => {
     console.log('Received values of form: ', values);
     setVisible(false);
+    success()
   };
 
   return (
