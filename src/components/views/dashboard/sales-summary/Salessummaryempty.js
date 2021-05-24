@@ -21,8 +21,8 @@ const Salessummaryempty = () => {
   return ( 
       <>
           <Pagetitle title={title}/>
-          <Row style={{padding:'0 14px 14px 14px', margin:'0px'}} gutter={{ xs:12, lg: 6 }}>            
-              <Col style={{paddingLeft:'0px'}}>
+          <Row className="filterBox" style={{padding:'0 14px 14px 14px', margin:'0px'}} gutter={{ xs:12, lg: 6 }}>            
+              <Col className="pl-0">
                   <Rangepicker/>
               </Col>
               <Col>
@@ -34,11 +34,11 @@ const Salessummaryempty = () => {
               <Col>
                   <Location/>
               </Col>
-              <Col className="ml-auto" >    
+              <Col className="pr-0 ml-auto" >    
                   <Exportbutton/> 
               </Col>
           </Row>
-          <Content style={{minHeight: 200}}>
+          <Content className="salesSummaryContent" style={{minHeight: 200}}>
             <Row>
                 <Col lg={24}  xs={24}>
                     <div  className="bg-white" style={{margin: '0px 14px 0px 14px',padding: 14,minHeight: 200}}>

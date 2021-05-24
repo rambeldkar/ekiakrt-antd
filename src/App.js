@@ -13,7 +13,7 @@ import Headerlayout from './components/common/header/Header.js'
 import Footerlayout from './components/common/footer/Footer.js'
 import Salessummary from './components/views/dashboard/sales-summary/Salessummary.js'
 import Salessummaryempty from './components/views/dashboard/sales-summary/Salessummaryempty';
-import './App.less';
+import './assets/css/app.less';
 
 const App = () => {
   const { Header, Sider } = Layout;
@@ -24,7 +24,7 @@ const App = () => {
     setIsDarkMode(isChecked);
     switcher({ theme: isChecked ? themes.dark : themes.light });
   };
-  return (  
+  return (      
     <Router>
       <div className="ekiakrtApp" id="ekikartLayout">
       <Layout style={{ minHeight: '100vh' }}>
@@ -39,7 +39,7 @@ const App = () => {
             </Sider>
           </MediaQuery>          
           <Layout className="site-layout">
-              <Header className="bg-white" style={{ padding: 0 }}>
+              <Header className="bg-white p-0">
                   {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                       className: 'trigger',
                       onClick: () => setIsCollapsed(!isCollapsed),

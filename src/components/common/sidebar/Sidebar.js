@@ -2,15 +2,15 @@ import React from 'react';
 import {
   NavLink
 } from "react-router-dom";
-import '../../../App.less';
 import { Menu} from 'antd';
 import {QrcodeOutlined, UserOutlined,DashboardOutlined,ShoppingCartOutlined,CreditCardOutlined,NotificationOutlined,ShopOutlined,TeamOutlined,PictureOutlined,GiftOutlined,FieldTimeOutlined
 } from '@ant-design/icons';
 import Logo from '../../../assets/images/Logo/logo-white.png'
 import Logosmall from '../../../assets/images/Logo/logo-blue-small.png'
+import './sidebar.less'
+
 const { SubMenu } = Menu;
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
-
 const Sidebarlayout = () => {
   const [openKeys, setOpenKeys] = React.useState(['sub1']);
   const onOpenChange = keys => {
@@ -28,7 +28,7 @@ const Sidebarlayout = () => {
             <img className="logoSmall" src={Logosmall} width={40} style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center'}} alt="Logo"/>
         </div> 
         <Menu theme="dark" mode="inline" openKeys={openKeys} onOpenChange={onOpenChange}  defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}>
+        defaultOpenKeys={['sub1']}>        
         <SubMenu key="sub1" icon={<DashboardOutlined />} title="Dashboard">
             <Menu.Item key="1"><NavLink activeClassName="active" to="/">Sales Summary </NavLink></Menu.Item>
             <Menu.Item key="3"><NavLink activeClassName="active" to="/">Item Sales</NavLink></Menu.Item>

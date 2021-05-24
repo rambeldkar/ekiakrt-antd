@@ -6,7 +6,7 @@ const columns = [
       dataIndex: 'label',
       key: '1',
       fixed: 'left',
-      width: 180,
+      width: 170,
     },
     { title: '5/1',dataIndex: 'dayfilterData',key: '1' ,width: 150,align: 'right' },
     { title: '5/2',dataIndex: 'dayfilterData',key: '1' ,width: 150,align: 'right' },

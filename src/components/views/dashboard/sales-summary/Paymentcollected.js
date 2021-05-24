@@ -8,7 +8,7 @@ const columns = [
       dataIndex: 'label',
       key: 'label',
       fixed: 'left',
-      width: 180,
+      width: 170,
       render: label => (
         <>
         {label.map(tag => {

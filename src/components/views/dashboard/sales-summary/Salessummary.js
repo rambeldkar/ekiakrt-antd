@@ -1,3 +1,4 @@
+
 import React,{useEffect} from 'react';
 import { Line } from '@ant-design/charts';
 import { Column } from '@ant-design/charts' ; 
@@ -10,6 +11,8 @@ import Allday from '../../../layout/filter/Allday.js'
 import Location from '../../../layout/filter/Location.js'
 import Exportbutton from '../../../layout/Exportbutton.js'
 import { Layout,Row,Col,Skeleton} from 'antd';
+import './salessummary.less'
+
 const { Content } = Layout;
 const title = "Sales Summary";
 
@@ -244,15 +247,14 @@ const timeConfig = {
 
 const Salessummary = () => {
   const [ loading, setLoading ] =  React.useState(true);
-
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   },[])
   return ( 
       <>
           <Pagetitle title={title}/>
-          <Row style={{padding:'0 14px 14px 14px', margin:'0px'}} gutter={{ xs:12, lg: 6 }}>            
-              <Col style={{paddingLeft:'0px'}}>
+          <Row className="filterBox" style={{padding:'0 14px 14px 14px', margin:'0px'}} gutter={{ xs:12, lg: 6 }}>  
+              <Col className="pl-0">
                   <Rangepicker/>
               </Col>
               <Col>
@@ -264,11 +266,11 @@ const Salessummary = () => {
               <Col>
                   <Location/>
               </Col>
-              <Col className="ml-auto" >    
+              <Col className="pr-0 ml-auto" >    
                   <Exportbutton/> 
               </Col>
           </Row>
-          <Content  style={{minHeight: 200}}>
+          <Content className="salesSummaryContent" style={{minHeight: 200}}>          
             <Row>
                 <Col lg={24}  xs={24}>
                     <div  className="bg-white" style={{margin: '0px 14px 0px 14px',padding: 14,minHeight: 200}}>
@@ -295,6 +297,7 @@ const Salessummary = () => {
                     </div>
                 </Col>
             </Row>
+            
             <Row>
                 <Col lg={24} xs={24}>
                     <div  className="bg-white" style={{margin: '0px 14px 14px 14px',padding: 14}}>

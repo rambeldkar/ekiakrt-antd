@@ -1,15 +1,15 @@
 import React from 'react';
-import { DatePicker} from 'antd';
+import { DatePicker } from 'antd';
 import moment from 'moment';
 const { RangePicker } = DatePicker;
-
+const dateFormat = 'YYYY-MM-DD';
 function onChange(dates, dateStrings) {
     console.log('From: ', dates[0], ', to: ', dates[1]);
     console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-  }
+}
 const Rangepicker = () => {
-    return ( 
-        <RangePicker 
+    return (
+        <RangePicker format={dateFormat} 
             ranges={{
                 'Today': [moment(), moment()],
                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -19,9 +19,9 @@ const Rangepicker = () => {
                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
                 'This Year': [moment().startOf('year'), moment().endOf('year')],
                 'Last Year': [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')]
-                }}
-            onChange={onChange}
-         />
+            }}
+            onChange={onChange} 
+        />
     );
 }
 export default Rangepicker;
