@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ekiakrt-antd/static/css/main.3d4fbbb0.chunk.css",
-    "main.js": "/ekiakrt-antd/static/js/main.a053b6ea.chunk.js",
-    "main.js.map": "/ekiakrt-antd/static/js/main.a053b6ea.chunk.js.map",
+    "main.js": "/ekiakrt-antd/static/js/main.78c5fb4e.chunk.js",
+    "main.js.map": "/ekiakrt-antd/static/js/main.78c5fb4e.chunk.js.map",
     "runtime-main.js": "/ekiakrt-antd/static/js/runtime-main.094a8e0f.js",
     "runtime-main.js.map": "/ekiakrt-antd/static/js/runtime-main.094a8e0f.js.map",
     "static/css/2.aeddefd9.chunk.css": "/ekiakrt-antd/static/css/2.aeddefd9.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.aeddefd9.chunk.css",
     "static/js/2.df0b2eea.chunk.js",
     "static/css/main.3d4fbbb0.chunk.css",
-    "static/js/main.a053b6ea.chunk.js"
+    "static/js/main.78c5fb4e.chunk.js"
   ]
 }
