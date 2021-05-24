@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Line } from '@ant-design/charts';
 import { Column } from '@ant-design/charts';
