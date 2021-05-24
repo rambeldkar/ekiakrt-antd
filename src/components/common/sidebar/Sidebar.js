@@ -7,7 +7,7 @@ import {
   QrcodeOutlined, UserOutlined, DashboardOutlined, ShoppingCartOutlined, CreditCardOutlined, NotificationOutlined, ShopOutlined, TeamOutlined, PictureOutlined, GiftOutlined, FieldTimeOutlined
 } from '@ant-design/icons';
 import Logo from '../../../assets/images/Logo/logo-white.png'
-import Logosmall from '../../../assets/images/Logo/logo-blue-small.png'
+import Logosmall from '../../../assets/images/Logo/ekikart-logo-small.png'
 import './sidebar.less'
 
 const { SubMenu } = Menu;

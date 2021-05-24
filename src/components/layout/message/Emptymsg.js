@@ -1,18 +1,19 @@
 import React from 'react';
 import { Empty } from 'antd';
+import Nodata from '../../../assets/images/no-data.png'
 
 const Emptymsg = (props) => {
     return (
         <Empty className="emptyMessageBox" style={{ margin: '70px 0px' }}
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
+            image={Nodata}
             imageStyle={{
                 height: 100,
-                border: '2px solid #ddd',
-                padding: 15,
                 width: 100,
                 borderRadius: '50%',
                 margin: 'auto',
-                marginBottom: '15px'
+                marginBottom: '15px',
+                //border: '2px solid #ddd',
+                //padding: 15,
             }}
             description={
                 <span>
