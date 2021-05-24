@@ -9,7 +9,7 @@ function onChange(dates, dateStrings) {
 }
 const Rangepicker = () => {
     return (
-        <RangePicker format={dateFormat} 
+        <RangePicker format={dateFormat}
             ranges={{
                 'Today': [moment(), moment()],
                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -20,7 +20,7 @@ const Rangepicker = () => {
                 'This Year': [moment().startOf('year'), moment().endOf('year')],
                 'Last Year': [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')]
             }}
-            onChange={onChange} 
+            onChange={onChange}
         />
     );
 }

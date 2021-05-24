@@ -1,12 +1,12 @@
 import React from 'react';
-import { PageHeader} from 'antd';
+import { PageHeader } from 'antd';
 
 const Pagetitle = (props) => {
-    return ( 
-        <PageHeader style={{padding:14}}
+    return (
+        <PageHeader style={{ padding: 14 }}
             className="site-page-header"
-            title={ props.title }
-            subTitle={ props.subtitle }
+            title={props.title}
+            subTitle={props.subtitle}
         />
     );
 }
